@@ -1,13 +1,936 @@
-.page>.header-container>.pr-header__rw {
-    height: 100px;
-    width: 100%;
-    background: green;
-    border: 1px solid black;
+/*--------------------general styles---------------------*/
+* { box-sizing: border-box; }
+body { padding: 0;	margin: 0; overflow: visible; background: green; font-family: Arial,sans-serif;
+	   color: #363636;
 }
+.visually-hidden,
+.mobile-logo.block-mobilelogo,
 #highlighted,
-.region.search,
-#main-content,
-#footer,
-.footer-bottom-container {
-  display: none;
+#footer,.footer-bottom-container,
+#block-userblock, #block-mobilemenublock /*header 2bloka iz 3h right*/,
+#block-userblock .block__content .user-settings /*в хидере справа ru usd*/,
+#block-userblock>.block__inner /*окно с языками и валютами*/,
+.region.search .block__inner>.block__title /*h2 выше формы поиска но во внеш контейнере*/,
+.train-booking-search-form .search-form-switcher.js-form-wrapper /*1div в форме поиска*/,
+.train-booking-search-form .form-flex-container.roundtrip-mode /*3div в форме поиска*/,
+.train-booking-search-form .form-flex-container.complex-mode /*4div в форме поиска*/,
+#edit-main-trains #edit-main-trains-no-result,
+.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper, 
+.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper {
+	display: none;
 }
+ul li { line-height: 120%; }
+a { text-decoration: none; }
+ul, ol, dd, dl, p, figure, pre, table, hr, form, fieldset {
+    margin: 0 0 18px;
+    margin: 0 0 1.125rem;
+}
+input {
+				    min-width: 13px;
+				    line-height: 1;
+				    vertical-align: middle;
+				    height: 32px;
+				    height: 2rem;
+				    padding: 0 7px;
+				    padding: 0 0.4375rem;
+				}
+form {
+			    margin: 0 auto;
+			    max-width: 1024px;
+			}
+input, select, button, textarea {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 21px;
+    line-height: 1.3125rem;
+}
+/*-----------------    header    ------------------*/  
+ 
+ /*111111111111111111111111111111111111111111111111111111111111111111*/    		
+.page .header-container /*1контейнер для хидера*/ {
+    height: 100px;  width: 100%; background: #030303;
+}
+/*22222222222222222222222222222222222222222222222222222222222222222222*/
+.page .header-container .top-header /*2контейнер для хидера*/ {
+	width: 1024px;  outline: 1px solid red;	height: 80%;
+	margin: 0 auto;   padding: 10px 16px;
+}
+/*333333333333333333333333333333333333333333333333333333333333333333333*/
+.page .top-header .pr-header__header-first /*3 для меню лев*/,
+.page .top-header .pr-header__header-second /*3 для изображения-бренд*/,
+.page .top-header .header-third /*3 для меню прав*/ {
+	outline: 1px dotted white;	 height: 100%;
+}
+.page .top-header .pr-header__header-first /*3 для меню лев*/ {
+	float: left;	width: 35%;
+}
+.page .top-header .header-third /*3 для меню прав*/ {
+	float: right;	width: 25%; margin-right: 90px;
+}
+.page .top-header .pr-header__header-second /*3 для изображения-бренд*/ { 
+	float: left;	width: 15%;	margin-left: 60px;
+} 
+.page .top-header nav {
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+/*444444444444444444444444444444444444444444444444444444444444444444*/
+.pr-header__header-first .block-plugin-id--system-menu-blockheader-left /*4список лев nav*/,
+.header-third .block-plugin-id--system-menu-blockheader-right /*4список прав прав nav*/ {
+	outline: 1px dashed blue;	margin-top: 30px;	
+}
+.pr-header__header-first .block-plugin-id--system-menu-blockheader-left::after /*4список лев nav*/,
+.header-third .block-plugin-id--system-menu-blockheader-right::after /*4список прав nav*/ {
+	content: "";	display: table;	clear: both; /*общая псевдораспорка для 4список лев nav,4список прав nav*/
+}
+.header-third .block-plugin-id--system-menu-blockheader-right /*4список прав nav*/ {
+	width: 80%;
+}
+#block-userblock /*4справа от 4список nav*/ {
+	display: block;	position: relative; height: 35px; width: 35px; background: url("setting-icon.svg") 50% 50% no-repeat; 
+	float: right; cursor: pointer; margin-top: -25px; outline: 1px dotted red;
+}
+/*#block-userblock:hover {
+	animation: sc 1.5s infinite;
+}
+	@keyframes sc {
+		0% {transform: rotate(0deg); }
+		100% {transform: rotate(360deg);}
+
+	}*/
+/*5555555555555555555555555555555555555555555555555555555555555555555555*/
+.pr-header__header-first .block-plugin-id--system-menu-blockheader-left li /*4список лев--li*/,
+.header-third .block-plugin-id--system-menu-blockheader-right li /*4список прав--li*/ {
+	display: inline-block; 
+}
+.menu-level-1.menu-name--header-left /*5список левое в хидере*/ { 
+	margin: 0; padding: 0; 
+}
+.page .header-container .top-header a /*2контейнер для хидера---5ссылки*/ {
+	color: #ffffff;	text-transform: uppercase;	font-size: 1.1875rem;
+}
+.pr-header__header-first .block-plugin-id--system-menu-blockheader-left li:first-child /*4список лев--li*/,
+.header-third .block-plugin-id--system-menu-blockheader-right li /*4список прав--li*/ {
+	outline: 1px solid red; float: left;
+}
+.pr-header__header-first .block-plugin-id--system-menu-blockheader-left li:nth-child(2) /*4список лев--li*/ {
+	outline: 1px solid green; float: right;
+}
+#block-userblock>.block__inner /*1внешний блок для выпадающего окна из шестеренки*/ {
+	outline: 1px solid blue; position: absolute; left: -510px; top: 68px;
+	width: 570px; height: 500px; z-index: 2; background: white;
+}
+#block-userblock>.block__inner .user-blocks /*2*/ {
+	width: 100%;	height: 80%; outline: 1px dashed black; 
+}
+#block-languageswitcherblock /*блок для языков*/,
+#block-currencylist /*блок для валюты*/{
+	outline: 1px solid yellow;
+}
+#block-languageswitcherblock li /*языки элементы списка*/ {
+	display: inline-block; margin: 20px;
+}
+.currency-list div /*div списка валют*/{ display: inline-block; }
+.currency-list .currency-item .sign /*знак валюты*/ { margin-right: 10px; }
+#block-currencylist .currency-item /*валюта элементы списка div*/ {
+	display: inline-block; outline: 1px solid blue;	margin: 15px 100px 20px 15px;
+}/*выравнивание 2-го и 6-го элемента валют*/
+#block-currencylist .currency-item:nth-child(2) { margin-right: 80px; }
+#block-currencylist .currency-item:nth-child(6) { margin-right: 120px; }
+#block-languageswitcherblock li a /*языки-ссылки*/,
+#block-currencylist .currency-item a/*валюта-ссылки*/ {
+	color: black;	text-transform: none;
+}
+#block-languageswitcherblock #block-languageswitcherblock-title /*заголовок в языках*/ {
+	outline: 1px dashed red;	margin-bottom: 50px;
+}
+#block-languageswitcherblock  a {
+	background: transparent url("flags-foot.svg") no-repeat;
+    background-size: 43px;	padding: 10px; padding-left: 50px;
+}
+#block-languageswitcherblock ul { padding: 0; }
+#block-languageswitcherblock li:first-of-type a  { background-position: 0 7px;	  }
+#block-languageswitcherblock li:nth-of-type(2) a { background-position: 0 -68px;  }
+#block-languageswitcherblock li:nth-of-type(3) a { background-position: 0 -30px;  }
+#block-languageswitcherblock li:nth-of-type(4) a { background-position: 0 -216px; }
+#block-languageswitcherblock li:nth-of-type(5) a { background-position: 0 -142px; }
+#block-languageswitcherblock li:nth-of-type(6) a { background-position: 0 -180px; }
+#block-languageswitcherblock li:nth-of-type(7) a { background-position: 0 -105px; }
+#block-languageswitcherblock .block__title span, /*заголовки h2 в языках и валюте*/ 
+#block-currencylist .block__title span { margin-left: 20px; }
+/*-------------------------------region-search-------------------------------*/
+/*-------------------------------область-поиска------------------------------*/
+#block-searchrouteblock  { background-image: none !important; }
+/*#highlighted,#main-content { display: block; }*/
+.region.search /*внешний контейнер для формы поиска*/ {	height: 100px; outline: 1px solid yellow;}
+.region.search .block__content /*внутренний контейнер для формы поиска*/ {
+	 max-width: 1024px; outline: 1px solid pink; margin: 0 auto;	padding: 25px 0;
+}
+.region.search .block__content>div /*div контейнер для области поиска*/ {
+	height: 40px;
+}
+.train-search-form-block .form-flex-container /*главный флэкс-контейнер поиска*/ {
+   display: -webkit-box; display: -moz-box;	display: -ms-flexbox; display: -webkit-flex; display: flex;
+   flex-direction: row; flex-wrap: wrap;  justify-content: space-between; align-items: center;
+   margin: 0 auto; height: 50px; width: 100%; position: relative;
+}
+.train-search-form-block .form-flex-container .leg /*откуда+куда+дата(flex-container)*/ {
+    width: 64%; flex-basis: 64%; display: -webkit-box; display: -moz-box; display: -ms-flexbox;
+    display: -webkit-flex; display: flex;flex-flow: row wrap;
+}
+	.train-search-form-block .form-flex-container .stations-wrapper /*откуда-куда(flex)*/ {
+    flex-basis: 60%; width: 60%; display: -webkit-box; display: -moz-box; display: -ms-flexbox;
+    display: -webkit-flex;display: flex; height: 100%;
+	}
+		.train-search-form-block .form-flex-container .stations-wrapper > div /*откуда(куда)*/ {
+   			flex-basis: 50%; height: 100%;  position: relative;
+		}
+
+	.train-search-form-block .form-flex-container .travel-date-wrapper /*обертка-дата*/{
+    flex-basis: 40%; width: 40%; line-height: 100%; color: #000000; background: #ffffff;
+    font-size: 1rem; font-family: Arial,sans-serif; border: 1px solid #dcdcdc; -o-border-radius: 0;
+    -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; padding-left: 17px; padding-right: 17px;
+    position: relative; border-right: none; min-height: 50px; display: flex; align-items: center;
+    min-height: 40px;
+	}
+		.train-search-form-block .form-flex-container .travel-date-wrapper .travel-date-input /*дата*/{
+    		padding-left: 28px;  overflow: hidden; width: 100%; word-break: break-all; max-height: 1rem;
+		}
+		.train-search-form-block .form-flex-container .travel-date-wrapper .travel-date-input::after {
+   			content: ""; position: absolute; top: 0;  right: 0; width: 100%; height: 100%;
+   			background: linear-gradient(to right,rgba(255,255,255,0) 85%,white 95%);
+		}
+.train-search-form-block .form-flex-container .passengers-field /*Пассажир*/ {
+    line-height: 100%; color: #000000; background: #ffffff; font-size: 1rem; font-family: Arial,sans-serif;
+    border: 1px solid #dcdcdc; -o-border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+    border-radius: 0; position: relative; cursor: pointer; padding-left: 17px; padding-right: 17px;
+    min-height: 40px; display: flex; align-items: center; min-height: 50px; width: 18%; flex-basis: 18%;
+    border-right: none;
+}
+	.train-search-form-block .form-flex-container .passengers-field .passengers-number /*Пассажир*/ {
+    overflow: hidden;  width: 100%;  word-break: break-all;  max-height: 1rem;
+	}	
+		.train-search-form-block .form-flex-container .passengers-field .passengers-number .value {
+   			 max-height: 1rem;
+		}
+		.train-search-form-block .form-flex-container .passengers-field .passengers-number .arrow {
+		    cursor: pointer; position: absolute;  top: 50%;  right: 15px; margin-top: -3px;
+		    background: transparent url(misc-icons.svg) no-repeat 0 0; border: none; width: 13px;
+		    height: 9px;  z-index: 1;  -webkit-transform: translate3d(0,0,1px);
+		}
+	.train-search-form-block .form-flex-container .passengers-field .passengers-wrapper /*Пас2*/ {
+    position: absolute;  left: 0;  right: 0;  top: 100%;  background: #ffffff; border: 1px solid #dcdcdc;
+    padding: 15px;   z-index: 999;  -webkit-transform: translate3d(0,0,1px); display: none;
+	}   
+ .train-search-form-block .form-flex-container .form-actions /*Поиск*/ {
+    width: 18%; flex-basis: 18%;	min-height: 40px;
+}
+	.train-search-form-block .form-flex-container .form-actions input[type="submit"] {
+    color: #ffffff; background-color: #ca0d03; cursor: pointer;  text-decoration: none;
+    -o-transition: 0.4s linear; -moz-transition: 0.4s linear; -webkit-transition: 0.4s linear;
+    transition: 0.4s linear;  font-weight: normal; text-align: center; -o-border-radius: 0;
+    -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; -webkit-box-shadow: none;
+    -moz-box-shadow: none; box-shadow: none; opacity: 1; border: none; width: 100%; height: 100%;
+    font-size: 1.0625rem;  padding: 0 5px; line-height: 120%; min-height: 50px;
+	}
+/*-------------------------------------#main-content-------------------------------------------------*/
+.page #main-content .container {
+    max-width: 100%;
+    outline: 1px solid black;
+}
+.page .l-rw {
+    max-width: 1024px;
+    padding: 0;
+}
+.l-rw {
+    max-width: 75em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+    padding: 0 1rem;
+}
+	.l-r {
+    transition: all, 225ms, ease-in-out;
+	}
+	.l-rw::after {
+    content: " ";
+    display: block;
+    clear: both;
+	}
+		.page #main-content .block:nth-of-type(odd) {
+    		background: #ffffff;
+		}
+		.page #main-content .block {
+    		margin: 0;
+    		width: 100%;
+    		font-family: "Helvetica Neue", Arial, sans-serif;
+		}
+		article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    		display: block;
+		}
+			/*-------------// <form>.train-booking-timetable-form  //------------*/
+			.train-bookingtimetable-form .page .train-booking-timetable-form, 
+			.train-bookingtimetable-form2 .page .train-booking-timetable-form {
+			    margin: 30px auto;
+			    display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    flex-flow: row wrap;
+			    justify-content: space-between;
+			    font-family: Arial,sans-serif;
+			    font-size: 1rem;
+			}
+				/*----------------------------//  main-trains  //-----------------------------*/
+				.train-bookingtimetable-form .page .train-booking-timetable-form .main-trains, 
+				.train-bookingtimetable-form2 .page .train-booking-timetable-form .main-trains {
+				    flex-basis: 70%;
+				}
+					/*--------------------------------//  train-table-header  //-----------------------*/
+					.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header, 
+					.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header {
+					    border: solid 1px #ebebeb;
+					    border-bottom-width: 0;
+					}
+						/*----------------------------------//   route-info-wrapper   //----------------------------------------*/
+						.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .route-info-wrapper, 
+						.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .route-info-wrapper {
+						    display: -webkit-box;
+						    display: -moz-box;
+						    display: -ms-flexbox;
+						    display: -webkit-flex;
+						    display: flex;
+						    flex-flow: row wrap;
+						    width: 100%;
+						    height: 100%;
+						    align-items: stretch;
+						    justify-content: space-between;
+						    padding: 30px 35px;
+						}
+							/*-------------------------// result-wrapper  dates-wrapper //---------------------------- */
+							.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .results-wrapper, 
+							.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .dates-wrapper,
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .results-wrapper, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .dates-wrapper {
+							    height: 100%;
+							}
+							/*---------------------------------results-wrapper-----------------------------------------*/
+							.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .results-wrapper, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .results-wrapper {
+							    flex-basis: 63%;
+							    padding-right: 35px;
+							}	
+								/*-------------------------- stations  //  inline-dates // dates-value ------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .stations,
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .dates-value, 
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .inline-dates, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .stations, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .dates-value,
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .inline-dates {
+								    padding-bottom: 15px;
+								}
+								/*----------------------------------stations------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .stations,
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .stations {
+								    display: flex;
+								    justify-content: flex-start;
+								    align-items: baseline;
+								    flex-direction: row;
+								    flex-wrap: wrap;
+								}
+									/*---------------------<span>.departure value      <span>.arrival value------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .stations .value, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .stations .value {
+									    font-size: 1.25rem;
+									}
+									.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .departure, 
+									.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .arrival, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .departure,
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .arrival {
+									    font-size: 1.25rem;
+									    display: flex;
+									    flex-direction: row;
+									    align-items: baseline;
+									}
+									/*------------------------------departure value:-----------------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .departure::after, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .departure::after {
+									    font-family: "FontAwesome", sans-serif;
+									    content: ">>";
+									    margin: 0 10px;
+									    font-size: 1.25rem;
+									    color: #acacad;
+									}
+
+								/*----------------------------------------inline-dates---------------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .inline-dates,
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .inline-dates {
+									font-size: 1.1875rem;
+									display: none;
+								}
+								/*-----------------------------------------results------------------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .results, 
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .dates-day, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .results, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .dates-day {
+								    color: #acacad;
+								    font-size: 0.875rem;
+								}
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .results, 
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .dates, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .results, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .dates {
+							    display: -webkit-box;
+							    display: -moz-box;
+							    display: -ms-flexbox;
+							    display: -webkit-flex;
+							    display: flex;
+							    justify-content: flex-start;
+							    align-items: baseline;
+							    flex-direction: row;
+								}
+									/*-------------------------quantity-label--------------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .results .quantity-label, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .results .quantity-label {
+									    padding-right: 0.3rem;
+									}
+									/*-------------------------sorting-label---------------------------------------*/
+										/*---------------//  <span>.sorting-type  //--------------------------*/
+										.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .results .sorting-type, 
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .results .sorting-type {
+										    color: #c10017;
+										    display: inline-flex;
+										    align-items: center;
+										}
+										.route-info-wrapper .sorting-label span, 
+										#edit-help-buttons div div, 
+										.train-table-header .sorting-row div {
+										    cursor: pointer;
+										}
+										.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .results .sorting-type::after, 
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .results .sorting-type::after {
+										    font-family: FontAwesome;
+										    content: "";
+										    color: #acacad;
+										    font-size: 1.2rem;
+										    margin-left: 7px;
+										}
+							/*----------------------------------dates-wrapper--------------------------------------------*/
+							.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .dates-wrapper,
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .dates-wrapper {
+							    flex-basis: 37%;
+							    padding-left: 35px;
+							    border-left: solid 1px #ebebeb;
+							}
+							/*-----------------------------------icons-wrapper-----------------------------------------*/
+							.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .timetable-header, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .timetable-header {
+							    width: 100%;
+							    display: -webkit-box;
+							    display: -moz-box;
+							    display: -ms-flexbox;
+							    display: -webkit-flex;
+							    display: flex;
+							    justify-content: space-between;
+							    align-items: baseline;
+							    padding: 15px 35px;
+							    background: #fafafa;
+							    color: #777777;
+							    font-size: 0.875rem;
+							    border-top: solid 1px #ebebeb;
+							}
+						/*---------------------------------------timetable-header-------------------------------------------*/
+						.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .timetable-header, 
+						.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .timetable-header {
+						    width: 100%;
+						    display: -webkit-box;
+						    display: -moz-box;
+						    display: -ms-flexbox;
+						    display: -webkit-flex;
+						    display: flex;
+						    justify-content: space-between;
+						    align-items: baseline;
+						    padding: 15px 35px;
+						    background: #fafafa;
+						    color: #777777;
+						    font-size: 0.875rem;
+						    border-top: solid 1px #ebebeb;
+						    outline: 1px solid yellow;
+						}
+							/*--------------------------------sorting-row------------------------------------*/
+							.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .sorting-row, 
+							.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .column-names, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .sorting-row, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .column-names {
+							    width: 100%;
+							    justify-content: space-between;
+							    align-items: center;
+							    flex-direction: row;
+							}
+							.timetable-header .sorting-row {
+							    display: none;
+							}
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .sorting-row div, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .sorting-row div {
+								    cursor: pointer;
+								}
+								/*--------------------------------popularity-------------------------------------*/
+								/*------------------------------departure-time-----------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .sorting-row div.active, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .sorting-row div.active {
+									color: #c10017;
+								}
+								/*-------------------------------travel-time-------------------------------------*/
+								/*-------------------------------arrival-time------------------------------------*/
+								/*--------------------------------price-from-------------------------------------*/
+								/*-----------------------------------rate----------------------------------------*/
+							/*--------------------------------column-names------------------------------------*/
+							.timetable-header .column-names {
+							    display: flex;
+							}
+								/*--------------------------------time-wrapper----------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .column-names .time-wrapper, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .column-names .time-wrapper {
+								    flex-basis: 55%;
+								}
+									/*---------------------------------------//  time-cols-wrapper  //------------------------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .column-names .time-wrapper .time-cols-wrapper, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .column-names .time-wrapper .time-cols-wrapper {
+									    display: -webkit-box;
+									    display: -moz-box;
+									    display: -ms-flexbox;
+									    display: -webkit-flex;
+									    display: flex;
+									    justify-content: space-between;
+									    align-items: stretch;
+									    max-width: 300px;
+									}
+										/*----------------------------------------------<div> отправление и прибытие---------------------------------------------------------*/
+										.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .column-names .time-wrapper .time-cols-wrapper > div, 
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .column-names .time-wrapper .time-cols-wrapper > div {
+										    flex-basis: 75px;
+										}
+								/*--------------------------------right-column----------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .column-names .right-column, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .column-names .right-column {
+								    flex-basis: 45%;
+								    display: -webkit-box;
+								    display: -moz-box;
+								    display: -ms-flexbox;
+								    display: -webkit-flex;
+								    display: flex;
+								    align-items: flex-start;
+								}
+									/*---------------------------------------price-wrapper------------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .column-names .price-wrapper, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form .train-table-header .column-names .price-wrapper {
+									    flex-basis: 50%;
+									    padding-left: 15px;
+									    padding-right: 15px;
+									}
+					/*---------------------------------#edit-main-trains------------------------------*/
+					.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains,
+					.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains {
+						display: -webkit-box;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+						flex-direction: column;
+						border: solid 1px #ebebeb;
+						border-bottom-width: 0;
+					}
+						/*----------------------------------------train-wrapper------------------------------------------*/
+						.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper, 
+						.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper {
+						    border-bottom: solid 1px #ebebeb;
+						}
+							/*-------------------------------------------time-row-----------------------------------------*/
+							.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row {
+							    display: inline-flex;
+							    flex-direction: row;
+							    width: 100%;
+							    justify-content: space-between;
+							    align-items: stretch;
+							    padding: 30px 35px;
+							}
+								/*------------------------------------train-col-----------------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-col, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-col {
+								    flex-basis: 55%;	outline: 1px dashed blue;
+								}
+									/*-----------------------------------train-time------------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-time, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-time {
+									    display: -webkit-box;
+									    display: -moz-box;
+									    display: -ms-flexbox;
+									    display: -webkit-flex;
+									    display: flex;
+									    width: 100%;
+									    justify-content: space-between;
+									    align-items: center;
+									    padding-bottom: 30px;
+									    max-width: 300px;	outline: 1px dotted pink;
+									}
+										.train-time > div, .coach-class-wrapper > div {
+										    display: inline-block;
+										}
+										/*----------------------------------dep-time-col-----------------------------*/
+											/*----------------------------------time------------------------------------*/
+											.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .time, 
+											.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .time {
+											    font-size: 1.9375rem;
+											    color: #222222;
+											}
+										/*-------------------------------------arrow---------------------------------*/
+										.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .arrow::before, 
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .arrow::before {
+										    font-family: FontAwesome;
+										    content: ">";
+										    color: #acacad;
+										    font-style: normal;
+										}
+										/*----------------------------------run-time-col-----------------------------*/
+											/*---------------------------------run-time---------------------------------*/
+											.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .run-time, 
+											.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .run-time {
+											    color: #777777;
+											    font-style: italic;
+											    font-size: 0.875rem;
+											}
+										/*-------------------------------------arrow---------------------------------*/
+										/*----------------------------------arr-time-col-----------------------------*/
+									/*---------------------------------train-info-row--------------------------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-info-row, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-info-row {
+									    font-size: 0.875rem;
+									    display: -webkit-box;
+									    display: -moz-box;
+									    display: -ms-flexbox;
+									    display: -webkit-flex;
+									    display: flex;
+									    align-items: flex-start;
+									    padding-bottom: 10px;
+									    flex-flow: row wrap;	outline: 1px dotted red;	background: url(rzhd.png) no-repeat; background-position: 0% -20%;
+									}
+										/*-------------------------------------------------img-----------------------------------------------------------------*/
+										.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-info-row img, 
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-info-row img {
+											display: none;
+										}
+										/*----------------------------------------------<span> Скоростной---------------------------------------------------------------------*/
+										.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-info-row .train-category, 
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-info-row .train-category {
+										    color: #777777;
+										    margin-right: 5px;
+										    margin-left: 50px;
+										}
+									/*----------------------------<a>rating-popup-trigger------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-popup-trigger, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-popup-trigger {
+									    color: #777777;
+									    -o-transition: 0.4s linear;
+									    -moz-transition: 0.4s linear;
+									    -webkit-transition: 0.4s linear;
+									    transition: 0.4s linear;
+									    text-decoration: none;	outline: 1px dotted yellow; 
+									}
+										/*--------------------------------------rating-row-----------------------------------*/
+										.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row, 
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row {
+										    display: -webkit-box;
+										    display: -moz-box;
+										    display: -ms-flexbox;
+										    display: -webkit-flex;
+										    display: flex;
+										    flex-flow: row wrap;
+										    justify-content: flex-start;
+										    align-items: center;
+										    font-size: 0.875rem;
+										}
+											/*-------------------------------------rating-stars----------------------------------------*/
+											.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row .rating-stars, 
+											.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row .rating-stars {
+											    margin-right: 7px;
+											    align-self: flex-start;
+											}
+											.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row .rating-stars, .train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row .rating-stars {
+											    background: url(stars-grey-light.png) no-repeat 0 0;
+											    width: 97.8px;
+											    height: 15.84px;
+											    background-size: 96.8px 15.84px;
+											    position: relative;
+											}
+												/*-------------------------------------active-stars----------------------------------------*/
+												.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row .rating-stars .active-stars, 
+												.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row .rating-stars .active-stars {
+													background: url(stars-grey-dark.png) no-repeat 0 0;
+												    background-size: 96.8px 15.84px;
+												    position: absolute;
+												    top: 0;
+												    bottom: 0;
+												    left: 0;
+												}
+											/*-------------------------------------<span> rating-phrase--------------------------------*/
+											.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row .rating-phrase, 
+											.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .rating-row .rating-phrase {
+											    color: #777777;
+											}
+								/*----------------------------------right-column----------------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .right-column, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .right-column {
+								    flex-basis: 45%;
+								    display: -webkit-box;
+								    display: -moz-box;
+								    display: -ms-flexbox;
+								    display: -webkit-flex;
+								    display: flex;
+								    align-items: flex-start;	outline: 1px dashed green;
+								}
+									/*---------------------------------------price-col----------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price-col, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price-col {
+									    padding-left: 15px;
+									    padding-right: 15px;
+									    flex-basis: 50%;
+									}
+										/*--------------------------------------price-from----------------------------------*/
+										.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price-from, 
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price-from {
+										    padding-bottom: 27px;
+										}
+											/*--------------------------------label-------------------------------*/
+											.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price-from .label, 
+											.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price-from .label {
+												display: none;
+											}
+											/*--------------------------------price---------------------------------*/
+											.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price, 
+											.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price {
+												font-size: 1.75rem;
+												color: #222222;
+											}
+												/*----------------------------amount-wrapper---------------------------*/
+												.amount-wrapper {
+													display: inline-block;
+												}
+									/*-------------------------------------train-select-col--------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-select-col, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-select-col {
+									    flex-basis: 50%;
+									}
+									/*-----------------------------------------select-btn--------------------------------*/
+										/*------------------------------------------select-seat btn-yellow------------------------------------*/
+										.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .select-seat,
+										.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .select-seat {
+										    color: #ffffff;
+										    background-color: #ffae00;
+										    cursor: pointer;
+										    text-decoration: none;
+										    -o-transition: 0.4s linear;
+										    -moz-transition: 0.4s linear;
+										    -webkit-transition: 0.4s linear;
+										    transition: 0.4s linear;
+										    font-weight: normal;
+										    text-align: center;
+										    padding-top: 17px;
+										    padding-bottom: 17px;
+										    padding-left: 15px;
+										    padding-right: 15px;
+										}
+							/*-------------------------------------coach-classes-wrapper------------------------------------*/
+							.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper {
+							    padding-top: 36px;
+							    padding-bottom: 0;
+							    border-top: solid 1px #ebebeb;
+							    flex-direction: column;
+							    position: relative;
+							}
+								/*--------------------------------------close js-form-wrapper-----------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper .close, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper .close {
+								    position: absolute;
+								    top: 10px;
+								    right: 35px;
+								}
+									/*-----------------------------------------------close-icon-----------------------------------------*/
+									.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper .close .close-icon, 
+									.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper .close .close-icon {
+									    width: 16px;
+									    height: 16px;
+									    background-size: 16px;
+									}
+									.close-icon {
+									    background: transparent url(close-icon-grey.svg) no-repeat 0 0;
+									    width: 22px;
+									    height: 22px;
+									    cursor: pointer;
+									    -o-transition: 0.4s linear;
+									    -moz-transition: 0.4s linear;
+									    -webkit-transition: 0.4s linear;
+									    transition: 0.4s linear;
+									}
+								/*---------------------------------------coach-class-wrapper-------------------------------------*/
+								.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper .coach-class-wrapper, 
+								.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper .coach-class-wrapper {
+								    justify-content: flex-start;
+								    align-items: center;
+								    flex-direction: row;
+								    flex-basis: 100%;
+								    padding: 15px 35px;
+								    font-size: 0.875rem;
+								    cursor: pointer;
+								}
+								.coach-class-wrapper.visible {
+								    display: flex;
+								}
+									/*----------------------------------------js-form-item-------------------------------------------------*/
+									/*---------------------------------------ticket-wrapper------------------------------------------------*/
+									/*---------------------------------------selected-label------------------------------------------------*/
+				/*--------------------------------------#edit-sidebar--------------------------*/
+				.train-bookingtimetable-form .page .train-booking-timetable-form #edit-sidebar,
+				.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-sidebar {
+					flex-basis: 28%;
+				}
+					/*-------------------------------------time-tip---------------------------------*/
+					.train-bookingtimetable-form .page .train-booking-timetable-form .filters .time-tip, 
+					.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .time-tip {
+					    flex-flow: row nowrap;
+					    justify-content: flex-start;
+					    align-items: flex-start;
+					    padding-bottom: 30px;
+					    color: #777777;
+					    font-style: italic;	outline: 1px solid yellow;
+					}
+
+					.train-bookingtimetable-form .page .train-booking-timetable-form .filters .filter-container, 
+					.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .filter-container {
+					    display: -webkit-box;
+					    display: -moz-box;
+					    display: -ms-flexbox;
+					    display: -webkit-flex;
+					    display: flex;
+					    flex-flow: row wrap;
+					}
+						.train-bookingtimetable-form .page .train-booking-timetable-form .filters .time-tip::before, 
+						.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .time-tip::before {
+						    content: "";
+						    width: 20px;
+						    max-width: 20px;
+						    height: 45px;
+						    background: transparent url(info-sign.png) no-repeat 0 center;
+						    display: inline-flex;
+						    flex-basis: 45px;
+						    outline: 1px dashed blue;
+						}
+					/*--------------------------------------stars-----------------------------------*/
+					.train-bookingtimetable-form .page .train-booking-timetable-form .filters .stars, 
+					.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .stars {
+					    padding-bottom: 30px;
+					}
+					.train-bookingtimetable-form .page .train-booking-timetable-form .filters .filter-container, 
+					.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .filter-container {
+					    display: -webkit-box;
+					    display: -moz-box;
+					    display: -ms-flexbox;
+					    display: -webkit-flex;
+					    display: flex;
+					    flex-flow: row wrap;
+					}
+						/*---------------------------------------title----------------------------------------*/
+						.train-bookingtimetable-form .page .train-booking-timetable-form .filters .title, 
+						.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .title {
+						    padding-bottom: 15px;
+						    color: #000000;
+						    font-size: 1.125rem;
+						    text-transform: uppercase;
+						    flex-basis: 100%;
+						}
+						/*-------------------------------------js-form-item-----------------------------------*/
+						.train-bookingtimetable-form .page .train-booking-timetable-form .filters .stars .form-item, 
+						.train-bookingtimetable-form .page .train-booking-timetable-form .filters .car-type .form-item, 
+						.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .stars .form-item, 
+						.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .car-type .form-item {
+						    flex-basis: 100%;
+						    display: -webkit-box;
+						    display: -moz-box;
+						    display: -ms-flexbox;
+						    display: -webkit-flex;
+						    display: flex;
+						    justify-content: flex-start;
+						    align-items: center;
+						}
+						form .form-item {
+						    margin: 0;
+						    font-size: 16px;
+						}
+							/*------------------------------<input> form-checkbox---------------------*/
+							.train-bookingtimetable-form .page .train-booking-timetable-form .filters input[type=checkbox], 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters input[type=checkbox] {
+							    flex-basis: 30px;
+							}
+							.train-bookingtimetable-form .page .train-booking-timetable-form .filters input[type=checkbox], 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters input[type=checkbox] {
+							    cursor: pointer;
+							    margin: 0;
+							    bottom: 0;
+							    -o-border-radius: 0;
+							    -moz-border-radius: 0;
+							    -webkit-border-radius: 0;
+							    border-radius: 0;
+							    display: flex;
+							    justify-content: center;
+							    align-items: center;
+							    height: 12px;
+							    width: 12px;
+							    position: relative;
+							}
+							input[type="checkbox"], input[type="radio"] {
+							    display: inline-block;
+							    position: relative;
+							    bottom: 1px;
+							    bottom: 0.0625rem;
+							    margin-left: 3px;
+							    margin-left: 0.1875rem;
+							    width: auto;
+							    height: auto;
+							    transform: scale(1);
+							}
+							/*---------------------------------<label> option-------------------------*/
+							.train-bookingtimetable-form .page .train-booking-timetable-form .filters input[type=checkbox] + label, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters input[type=checkbox] + label {
+							    margin-left: 10px;
+							    padding: 0;
+							    -o-border-radius: 0;
+							    -moz-border-radius: 0;
+							    -webkit-border-radius: 0;
+							    border-radius: 0;
+							    word-wrap: normal;
+							    white-space: normal;
+							}
+							.train-bookingtimetable-form .page .train-booking-timetable-form .filters .stars label, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .stars label {
+							    align-items: center;
+							}
+							.train-bookingtimetable-form .page .train-booking-timetable-form .filters label, 
+							.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters label {
+							    display: inline-flex;
+							    padding: 0;
+							    margin: 0;
+							    color: #909090;
+							    justify-content: space-between;
+							    align-items: flex-end;
+							    flex-basis: calc(100% - 30px);
+							}
+							form .form-type-radio label.option, form .form-type-checkbox label.option {
+							    border: none;
+							    background: none;
+							}
+					/*-------------------------------------car-type---------------------------------*/
+					/*--------------------------------------price-----------------------------------*/
+					/*------------------------------------departure---------------------------------*/
+					/*-------------------------------------arrival----------------------------------*/
+					/*------------------------------reset-filters-wrapper---------------------------*/
