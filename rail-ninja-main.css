@@ -790,13 +790,11 @@ input, select, button, textarea {
 									/*----------------------------------------js-form-item-------------------------------------------------*/
 									/*---------------------------------------ticket-wrapper------------------------------------------------*/
 									/*---------------------------------------selected-label------------------------------------------------*/
-				/*--------------------------------------#edit-sidebar--------------------------*/
-				.train-bookingtimetable-form .page .train-booking-timetable-form #edit-sidebar,
-				.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-sidebar {
-					flex-basis: 28%;
-				}
+			/*--------------------------------------#edit-sidebar--------------------------*/
+			/*	.train-bookingtimetable-form .page .train-booking-timetable-form #edit-sidebar,---------------------------------------------------*/
+				
 					/*-------------------------------------time-tip---------------------------------*/
-					.train-bookingtimetable-form .page .train-booking-timetable-form .filters .time-tip, 
+				/*	.train-bookingtimetable-form .page .train-booking-timetable-form .filters .time-tip, 
 					.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .time-tip {
 					    flex-flow: row nowrap;
 					    justify-content: flex-start;
@@ -827,7 +825,7 @@ input, select, button, textarea {
 						    outline: 1px dashed blue;
 						}
 					/*--------------------------------------stars-----------------------------------*/
-					.train-bookingtimetable-form .page .train-booking-timetable-form .filters .stars, 
+				/*	.train-bookingtimetable-form .page .train-booking-timetable-form .filters .stars, 
 					.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .stars {
 					    padding-bottom: 30px;
 					}
@@ -841,7 +839,7 @@ input, select, button, textarea {
 					    flex-flow: row wrap;
 					}
 						/*---------------------------------------title----------------------------------------*/
-						.train-bookingtimetable-form .page .train-booking-timetable-form .filters .title, 
+				/*		.train-bookingtimetable-form .page .train-booking-timetable-form .filters .title, 
 						.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .title {
 						    padding-bottom: 15px;
 						    color: #000000;
@@ -850,7 +848,7 @@ input, select, button, textarea {
 						    flex-basis: 100%;
 						}
 						/*-------------------------------------js-form-item-----------------------------------*/
-						.train-bookingtimetable-form .page .train-booking-timetable-form .filters .stars .form-item, 
+					/*	.train-bookingtimetable-form .page .train-booking-timetable-form .filters .stars .form-item, 
 						.train-bookingtimetable-form .page .train-booking-timetable-form .filters .car-type .form-item, 
 						.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .stars .form-item, 
 						.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters .car-type .form-item {
@@ -868,7 +866,7 @@ input, select, button, textarea {
 						    font-size: 16px;
 						}
 							/*------------------------------<input> form-checkbox---------------------*/
-							.train-bookingtimetable-form .page .train-booking-timetable-form .filters input[type=checkbox], 
+					/*		.train-bookingtimetable-form .page .train-booking-timetable-form .filters input[type=checkbox], 
 							.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters input[type=checkbox] {
 							    flex-basis: 30px;
 							}
@@ -900,7 +898,7 @@ input, select, button, textarea {
 							    transform: scale(1);
 							}
 							/*---------------------------------<label> option-------------------------*/
-							.train-bookingtimetable-form .page .train-booking-timetable-form .filters input[type=checkbox] + label, 
+					/*		.train-bookingtimetable-form .page .train-booking-timetable-form .filters input[type=checkbox] + label, 
 							.train-bookingtimetable-form2 .page .train-booking-timetable-form .filters input[type=checkbox] + label {
 							    margin-left: 10px;
 							    padding: 0;

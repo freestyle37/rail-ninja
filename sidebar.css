@@ -1,0 +1,69 @@
+.train-bookingtimetable-form .page .train-booking-timetable-form #edit-sidebar {
+	flex-basis: 28%;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar>div:not(:last-of-type) {
+	outline: 1px solid red;
+	display: flex;
+	/*flex-direction: column;
+	flex-wrap: nowrap;*/
+	
+
+	flex-flow: column nowrap;
+
+}
+	/*time-tip*/
+	#edit-sidebar .time-tip
+	{
+	display: flex;
+    flex-flow: row nowrap;
+	}
+		#edit-sidebar .time-tip .tip { outline: 1px solid blue; }
+		#edit-sidebar .time-tip::before {
+			content: "";
+			width: 20px;
+			height: 45px;
+			background: transparent url(info-sign.png) no-repeat 0 center;
+			display: inline-flex;
+			flex-basis: 65px;
+
+
+	}
+	/*stars*/
+	.stars .js-form-item {
+		display: flex;
+		flex-direction: row;
+		background: grey;
+	}
+	.stars input {
+		flex-basis: 30px;
+	}
+	.stars label {
+		line-height: 38px;
+	}
+	.stars label .rating-stars {
+		background: url(stars-grey-light.png) no-repeat;
+		width: 111px;
+		height: 18px;
+	}
+
+
+
+
+
+
+	/*.rating-stars {
+				display: flex-block;
+				background: url(stars-grey-light.png) no-repeat;
+			}
+			.active-stars {
+				display: flex-block;
+				background: url(stars-grey-dark,png) no-repeat;
+			}
+	/*car-type*/
+	/*price*/
+	/*departure*/
+	/*arrival*/
+	/*settings*//*info-sign*/
+
