@@ -9,11 +9,12 @@ $(document).ready(function() {
 
 	$("#block-userblock").on('click',function() {
 		$("#block-userblock>.block__inner").toggle(); /*shesterenka*/
+		$("#block-userblock::after").toggle();
 	});
 	$(".close").on('click',function() {
 		($(this).closest(".train-wrapper").find(".coach-classes-wrapper")).hide(); /*hide window*/
 		($(this).closest(".train-wrapper").find(".select-seat.btn-yellow")).show(); /*show button*/
-		($(this).closest(".train-wrapper")).css("border", "none");
+		($(this).closest(".train-wrapper")).css("border", "none"); /*border for window hide*/
 	});
 	
 

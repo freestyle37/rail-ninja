@@ -14,6 +14,7 @@ body { padding: 0;	margin: 0; overflow: visible; /*background: green;*/ font-fam
 .train-booking-search-form .search-form-switcher.js-form-wrapper /*1div в форме поиска*/,
 .train-booking-search-form .form-flex-container.roundtrip-mode /*3div в форме поиска*/,
 .train-booking-search-form .form-flex-container.complex-mode /*4div в форме поиска*/,
+#block-userblock::after,
 #edit-main-trains #edit-main-trains-no-result,
 .train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper, 
 .train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .coach-classes-wrapper {
@@ -157,6 +158,8 @@ input, select, button, textarea {
 #block-languageswitcherblock li:nth-of-type(7) a { background-position: 0 -105px; }
 #block-languageswitcherblock .block__title span, /*заголовки h2 в языках и валюте*/ 
 #block-currencylist .block__title span { margin-left: 20px; }
+
+
 /*-------------------------------region-search-------------------------------*/
 /*-------------------------------область-поиска------------------------------*/
 #block-searchrouteblock  { background-image: none !important;   box-shadow: 0 0 5px 0 rgba(0,0,0,0.5); background-color: #fafafa;}
@@ -932,3 +935,15 @@ input, select, button, textarea {
 					/*------------------------------------departure---------------------------------*/
 					/*-------------------------------------arrival----------------------------------*/
 					/*------------------------------reset-filters-wrapper---------------------------*/
+#block-userblock::after {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 16px solid #ffffff;
+    content: '';
+    position: absolute;
+    right: 1rem;
+  	bottom: -30px;
+    left: 5px;
+}
