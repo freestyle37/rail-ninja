@@ -4,22 +4,36 @@
     flex-direction: column;
 }
 .sidebar>div:not(:last-of-type) {
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
 	display: flex;
 	/*flex-direction: column;
 	flex-wrap: nowrap;*/
-	
-
 	flex-flow: column nowrap;
-
 }
-	/*time-tip*/
+.sidebar>div.price, .sidebar>div.departure, .sidebar>div.arrival {
+	flex-flow: row wrap;
+}
+.sidebar input {
+	flex-basis: 30px;
+}
+.sidebar .title {
+	padding-bottom: 15px;
+	font-size: 1.125rem;
+	text-transform: uppercase;
+	flex-basis: 100%;
+}
+	/*time-tip----------------------------------------------------------------------------------*/
 	#edit-sidebar .time-tip
 	{
 	display: flex;
     flex-flow: row nowrap;
+    padding-bottom: 30px;
+    font-style: italic;
 	}
-		#edit-sidebar .time-tip .tip { outline: 1px solid blue; }
+		#edit-sidebar .time-tip .tip { 
+			/*outline: 1px solid blue; */
+
+		}
 		#edit-sidebar .time-tip::before {
 			content: "";
 			width: 20px;
@@ -30,38 +44,64 @@
 
 
 	}
-	/*stars*/
+	/*stars----------------------------------------------------------------------------------------*/
 	.stars .js-form-item {
 		display: flex;
 		flex-direction: row;
-		background: grey;
+		
 	}
 	.stars input {
 		flex-basis: 30px;
 	}
 	.stars label {
 		line-height: 38px;
+		display: flex;
+		justify-content: space-between;
+		flex-basis: calc(100% - 30px);
+		margin-left: 20px;
 	}
+	.stars>.title {
+		padding-bottom: 15px;
+	} 
 	.stars label .rating-stars {
-		background: url(stars-grey-light.png) no-repeat;
-		width: 111px;
-		height: 18px;
+    background: url(stars-grey-light.png) no-repeat 0 0;
+    width: 111px;
+    height: 18px;
+    margin-top: 8px;
+    position: relative;
+    
 	}
-
-
-
-
-
-
-	/*.rating-stars {
-				display: flex-block;
-				background: url(stars-grey-light.png) no-repeat;
-			}
-			.active-stars {
-				display: flex-block;
-				background: url(stars-grey-dark,png) no-repeat;
-			}
-	/*car-type*/
+	
+	.active-stars {
+    width: 110px;
+    height: 18px;
+    background-size: 110px 18px;
+    background: url(stars-grey-dark.png);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+	}
+	/*car-type---------------------------------------------------------------------------------------------------------*/
+	.car-type .js-form-item {
+		display: flex;
+    	flex-direction: row;
+	}
+	.car-type .option {
+		line-height: 38px;
+	    display: flex;
+	    justify-content: space-between;
+	    flex-basis: calc(100% - 30px);
+	    margin-left: 20px;
+	}
+	/*--------------------------------------------------------------------------------------------------------------*/
+	.filter-container .lowest,
+	.filter-container .highest {
+		flex-basis: 50%;
+	}
+	
+	
 	/*price*/
 	/*departure*/
 	/*arrival*/

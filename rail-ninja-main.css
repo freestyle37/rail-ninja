@@ -1,6 +1,6 @@
 /*--------------------general styles---------------------*/
 * { box-sizing: border-box; }
-body { padding: 0;	margin: 0; overflow: visible; background: green; font-family: Arial,sans-serif;
+body { padding: 0;	margin: 0; overflow: visible; /*background: green;*/ font-family: Arial,sans-serif;
 	   color: #363636;
 }
 .visually-hidden,
@@ -52,14 +52,14 @@ input, select, button, textarea {
 }
 /*22222222222222222222222222222222222222222222222222222222222222222222*/
 .page .header-container .top-header /*2контейнер для хидера*/ {
-	width: 1024px;  outline: 1px solid red;	height: 80%;
+	width: 1024px; /* outline: 1px solid red;*/	height: 80%;
 	margin: 0 auto;   padding: 10px 16px;
 }
 /*333333333333333333333333333333333333333333333333333333333333333333333*/
 .page .top-header .pr-header__header-first /*3 для меню лев*/,
 .page .top-header .pr-header__header-second /*3 для изображения-бренд*/,
 .page .top-header .header-third /*3 для меню прав*/ {
-	outline: 1px dotted white;	 height: 100%;
+	/*outline: 1px dotted white;*/	 height: 100%;
 }
 .page .top-header .pr-header__header-first /*3 для меню лев*/ {
 	float: left;	width: 35%;
@@ -76,7 +76,7 @@ input, select, button, textarea {
 /*444444444444444444444444444444444444444444444444444444444444444444*/
 .pr-header__header-first .block-plugin-id--system-menu-blockheader-left /*4список лев nav*/,
 .header-third .block-plugin-id--system-menu-blockheader-right /*4список прав прав nav*/ {
-	outline: 1px dashed blue;	margin-top: 30px;	
+	/*outline: 1px dashed blue;*/	margin-top: 30px;	
 }
 .pr-header__header-first .block-plugin-id--system-menu-blockheader-left::after /*4список лев nav*/,
 .header-third .block-plugin-id--system-menu-blockheader-right::after /*4список прав nav*/ {
@@ -87,7 +87,7 @@ input, select, button, textarea {
 }
 #block-userblock /*4справа от 4список nav*/ {
 	display: block;	position: relative; height: 35px; width: 35px; background: url("setting-icon.svg") 50% 50% no-repeat; 
-	float: right; cursor: pointer; margin-top: -25px; outline: 1px dotted red;
+	float: right; cursor: pointer; margin-top: -25px; /*outline: 1px dotted red;*/
 }
 /*#block-userblock:hover {
 	animation: sc 1.5s infinite;
@@ -110,21 +110,21 @@ input, select, button, textarea {
 }
 .pr-header__header-first .block-plugin-id--system-menu-blockheader-left li:first-child /*4список лев--li*/,
 .header-third .block-plugin-id--system-menu-blockheader-right li /*4список прав--li*/ {
-	outline: 1px solid red; float: left;
+	/*outline: 1px solid red;*/ float: left;
 }
-.pr-header__header-first .block-plugin-id--system-menu-blockheader-left li:nth-child(2) /*4список лев--li*/ {
-	outline: 1px solid green; float: right;
+.pr-header__header-first .block-plugin-id--system-menu-blockheader-left li:last-child /*4список лев--li*/ {
+	/*outline: 1px solid green;*/ float: right; color: red;
 }
 #block-userblock>.block__inner /*1внешний блок для выпадающего окна из шестеренки*/ {
-	outline: 1px solid blue; position: absolute; left: -510px; top: 68px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.3); position: absolute; left: -510px; top: 68px;
 	width: 570px; height: 500px; z-index: 2; background: white;
 }
 #block-userblock>.block__inner .user-blocks /*2*/ {
-	width: 100%;	height: 80%; outline: 1px dashed black; 
+	width: 100%;	height: 80%; /*outline: 1px dashed black; */
 }
 #block-languageswitcherblock /*блок для языков*/,
 #block-currencylist /*блок для валюты*/{
-	outline: 1px solid yellow;
+	/*outline: 1px solid yellow;*/
 }
 #block-languageswitcherblock li /*языки элементы списка*/ {
 	display: inline-block; margin: 20px;
@@ -132,7 +132,7 @@ input, select, button, textarea {
 .currency-list div /*div списка валют*/{ display: inline-block; }
 .currency-list .currency-item .sign /*знак валюты*/ { margin-right: 10px; }
 #block-currencylist .currency-item /*валюта элементы списка div*/ {
-	display: inline-block; outline: 1px solid blue;	margin: 15px 100px 20px 15px;
+	display: inline-block; /*outline: 1px solid blue;*/	margin: 15px 100px 20px 15px;
 }/*выравнивание 2-го и 6-го элемента валют*/
 #block-currencylist .currency-item:nth-child(2) { margin-right: 80px; }
 #block-currencylist .currency-item:nth-child(6) { margin-right: 120px; }
@@ -141,7 +141,7 @@ input, select, button, textarea {
 	color: black;	text-transform: none;
 }
 #block-languageswitcherblock #block-languageswitcherblock-title /*заголовок в языках*/ {
-	outline: 1px dashed red;	margin-bottom: 50px;
+	/*outline: 1px dashed red;*/	margin-bottom: 50px;
 }
 #block-languageswitcherblock  a {
 	background: transparent url("flags-foot.svg") no-repeat;
@@ -159,11 +159,11 @@ input, select, button, textarea {
 #block-currencylist .block__title span { margin-left: 20px; }
 /*-------------------------------region-search-------------------------------*/
 /*-------------------------------область-поиска------------------------------*/
-#block-searchrouteblock  { background-image: none !important; }
+#block-searchrouteblock  { background-image: none !important;   box-shadow: 0 0 5px 0 rgba(0,0,0,0.5); background-color: #fafafa;}
 /*#highlighted,#main-content { display: block; }*/
-.region.search /*внешний контейнер для формы поиска*/ {	height: 100px; outline: 1px solid yellow;}
+.region.search /*внешний контейнер для формы поиска*/ {	height: 100px; /* outline: 1px solid yellow;*/}
 .region.search .block__content /*внутренний контейнер для формы поиска*/ {
-	 max-width: 1024px; outline: 1px solid pink; margin: 0 auto;	padding: 25px 0;
+	 max-width: 1024px; /*outline: 1px solid pink;*/ margin: 0 auto;	padding: 25px 0;
 }
 .region.search .block__content>div /*div контейнер для области поиска*/ {
 	height: 40px;
@@ -235,7 +235,7 @@ input, select, button, textarea {
 /*-------------------------------------#main-content-------------------------------------------------*/
 .page #main-content .container {
     max-width: 100%;
-    outline: 1px solid black;
+   /* outline: 1px solid black;*/
 }
 .page .l-rw {
     max-width: 1024px;
@@ -455,7 +455,7 @@ input, select, button, textarea {
 						    color: #777777;
 						    font-size: 0.875rem;
 						    border-top: solid 1px #ebebeb;
-						    outline: 1px solid yellow;
+						   /* outline: 1px solid yellow;*/
 						}
 							/*--------------------------------sorting-row------------------------------------*/
 							.train-bookingtimetable-form .page .train-booking-timetable-form .train-table-header .sorting-row, 
@@ -558,7 +558,7 @@ input, select, button, textarea {
 								/*------------------------------------train-col-----------------------------------------*/
 								.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-col, 
 								.train-bookingtimetable-form2 .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-col {
-								    flex-basis: 55%;	outline: 1px dashed blue;
+								    flex-basis: 55%;	/*outline: 1px dashed blue;*/
 								}
 									/*-----------------------------------train-time------------------------------------*/
 									.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-time, 
@@ -572,7 +572,7 @@ input, select, button, textarea {
 									    justify-content: space-between;
 									    align-items: center;
 									    padding-bottom: 30px;
-									    max-width: 300px;	outline: 1px dotted pink;
+									    max-width: 300px;	/*outline: 1px dotted pink;*/
 									}
 										.train-time > div, .coach-class-wrapper > div {
 										    display: inline-block;
@@ -613,7 +613,7 @@ input, select, button, textarea {
 									    display: flex;
 									    align-items: flex-start;
 									    padding-bottom: 10px;
-									    flex-flow: row wrap;	outline: 1px dotted red;	background: url(rzhd.png) no-repeat; background-position: 0% -20%;
+									    flex-flow: row wrap;	/*outline: 1px dotted red;*/	background: url(rzhd.png) no-repeat; background-position: 0% 0%;
 									}
 										/*-------------------------------------------------img-----------------------------------------------------------------*/
 										.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .train-info-row img, 
@@ -687,7 +687,7 @@ input, select, button, textarea {
 								    display: -ms-flexbox;
 								    display: -webkit-flex;
 								    display: flex;
-								    align-items: flex-start;	outline: 1px dashed green;
+								    align-items: flex-start;	/*outline: 1px dashed green;*/
 								}
 									/*---------------------------------------price-col----------------------------------*/
 									.train-bookingtimetable-form .page .train-booking-timetable-form #edit-main-trains .train-wrapper .time-row .price-col, 
